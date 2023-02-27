@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer' // メール送信用ライブラリ
-import dotenv from 'dotenv'
+require('dotenv').config();
 
 // メール送信処理
 const sendMail = (bodyText: string) => {

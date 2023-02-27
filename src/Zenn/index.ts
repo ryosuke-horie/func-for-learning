@@ -11,4 +11,3 @@ export async function handler(): Promise<any> {
     // メール送信処理
     return sendMail(await mailBodyText)
 }
-handler();
