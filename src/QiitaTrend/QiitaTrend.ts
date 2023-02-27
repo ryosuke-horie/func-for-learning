@@ -13,13 +13,13 @@ type APIResponse = {
 const QiitaTrendURL: string = 'https://qiita-api.vercel.app/api/trend'
 
 // Qiitaトレンドを取得し、メール本文用の文章に変換する。
-const getQiitaTrend = async(): Promise<any> => {
-    let mailBodyText: string = ''
+const getQiitaTrend = async(): Promise<string> => {
+    let mailBodyText: string = '【Qiita】\n'
     let response = await axios.get(QiitaTrendURL);
 
     await response.data.forEach((element: APIResponse) => {
-        mailBodyText = mailBodyText + element.node.title + '\br (' + element.node.linkUrl + ')' + '\n'
-        mailBodyText = mailBodyText + '---------------- \n \n'
+        mailBodyText = mailBodyText + element.node.title + '\n (' + element.node.linkUrl + ')' + '\n'
+        mailBodyText = mailBodyText + '---------------- \n'
     });
 
     return mailBodyText

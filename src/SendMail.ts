@@ -18,7 +18,7 @@ const sendMail = (bodyText: string) => {
     porter.sendMail({
         from: process.env.MAIL_ADDRESS,
         to: process.env.MAIL_ADDRESS,
-        subject: '[定期送信]Zennトレンド記事', // 件名
+        subject: '[定期送信]トレンド記事', // 件名
         text: bodyText // メール本文
     }, function (err, info) {
         if (err) { // エラーの場合
