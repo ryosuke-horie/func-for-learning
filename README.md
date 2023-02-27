@@ -24,4 +24,4 @@ deploy.shを実行することでLambdaへ自動でデプロイを行う。
   - nodemailer
   - ts-node
 - AWS Lambda, EventBridge
-- shellscript
+- shellscript# GptcalorieBot
